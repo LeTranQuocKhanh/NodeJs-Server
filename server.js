@@ -7,7 +7,7 @@ const port = 3000;
 
 // Cors configuration - Allows requests from localhost:4200
 const corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "https://letranquockhanh020902.netlify.app",
   optionsSuccessStatus: 204,
   methods: "GET, POST, PUT, DELETE",
 };
@@ -150,7 +150,7 @@ app.put("/clothes/:id", (req, res) => {
 // DELETE route - Allows to delete an item
 // example: localhost:3000/clothes/1
 app.delete("/clothes/:id", (req, res) => {
-  const id = parseInt(req.params.id)
+  const id = parseInt(req.params.id);
 
   fs.readFile("db.json", "utf8", (err, data) => {
     if (err) {
